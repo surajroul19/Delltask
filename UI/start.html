@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dell Task</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./angular.min.js"></script>
+    <script src="logic.js"></script>
+  </head>
+  <body ng-app="app">
+    <div ng-controller="mycontroller" class="card">
+      <ng-form name="pass">
+        <div>
+          <label for="First">First</label><br />
+          <input
+            type="number"
+            ng-model="first"
+            name="first"
+            ng-required="true"
+            ng-pattern="/^\d*$/"
+          /><br />
+
+          <span ng-show="pass.first.$error.pattern" style="color: red">
+            Value must be 0 or greater than 0 </span
+          ><br />
+        </div>
+
+        <div>
+          <label for="Second">Second</label><br />
+          <input
+            type="number"
+            ng-model="second"
+            name="second"
+            ng-required="true"
+            ng-pattern="/^\d*$/"
+          /><br />
+
+          <span ng-show="pass.second.$error.pattern" style="color: red">
+            Value must be 0 or greater than 0
+          </span>
+        </div>
+
+        <button ng-click="display(first,second)" ng-disabled="pass.$invalid">
+          Calculate
+        </button>
+      </ng-form>
+      <br />
+      <p ng-init="updateLastValue()">
+        Result: <span class="result">{{result}}</span>
+      </p>
+      <span class="response">{{data.message}}</span>
+    </div>
+  </body>
+</html>

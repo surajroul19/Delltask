@@ -1,0 +1,33 @@
+Application: Dell task
+
+Used : -AngularJS
+        ->Nodejs
+        -Express
+        -MongoDB
+
+
+        
+Steps to follow:
+
+Ui Set up:
+==========================================================
+-Save all the files from Ui folder
+-Open the start.html file in browser
+
+
+API Setup:
+===========================================================
+-Save all the files from API.
+-check the package.json file
+-Do npm install 
+-Use "node index.js" command
+
+DB Setup:
+============================================================
+-Install MongoDB
+-Create "Multiplication" DB
+-create "history" collection
+-Start DB
+
+
+Once all the setup is done . Please open the start.html file.
